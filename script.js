@@ -13,6 +13,7 @@ let btn6 = document.getElementById("btn6")
 let btn7 = document.getElementById("btn7")
 let btn8 = document.getElementById("btn8")
 let btn9 = document.getElementById("btn9")
+let display = document.getElementById("game-over")
 
 /*----- event listeners -----*/
 
@@ -36,9 +37,18 @@ function switchPlayer() {
   }
 }
 
+function gameOver() {
+    if (currentPlayer == "X") {
+        display.innerHTML = "Game Over. O wins."
+    } else {
+        display.innerHTML = "Game Over. X wins."
+
+    }
+}
+
 function checkForWin() {
     if (btn1.innerHTML + btn2.innerHTML + btn3.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
     } else if (btn4.innerHTML + btn5.innerHTML + btn6.innerHTML == "XXX") {
         alert("Win")
     } else if (btn7.innerHTML + btn8.innerHTML + btn9.innerHTML == "XXX") {
@@ -53,7 +63,26 @@ function checkForWin() {
         alert("Win")
     } else if (btn3.innerHTML + btn5.innerHTML + btn7.innerHTML == "XXX") {
         alert("Win")
+    } 
+
+    else if (btn1.innerHTML + btn2.innerHTML + btn3.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn4.innerHTML + btn5.innerHTML + btn6.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn7.innerHTML + btn8.innerHTML + btn9.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn1.innerHTML + btn4.innerHTML + btn7.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn2.innerHTML + btn5.innerHTML + btn8.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn3.innerHTML + btn6.innerHTML + btn9.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn1.innerHTML + btn5.innerHTML + btn9.innerHTML == "OOO") {
+        alert("Win")
+    } else if (btn3.innerHTML + btn5.innerHTML + btn7.innerHTML == "OOO") {
+        alert("Win")
     }
+    
 }
 
 function btn1Click() {
