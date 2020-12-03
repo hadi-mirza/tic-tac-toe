@@ -14,6 +14,7 @@ let btn7 = document.getElementById("btn7")
 let btn8 = document.getElementById("btn8")
 let btn9 = document.getElementById("btn9")
 let display = document.getElementById("game-over")
+let playerTurn = document.getElementById("player-turn")
 
 /*----- event listeners -----*/
 
@@ -26,6 +27,18 @@ btn6.addEventListener("click", btn6Click)
 btn7.addEventListener("click", btn7Click)
 btn8.addEventListener("click", btn8Click)
 btn9.addEventListener("click", btn9Click)
+
+function removeListener() {
+    btn1.removeEventListener("click", btn1Click)
+    btn2.removeEventListener("click", btn2Click)
+    btn3.removeEventListener("click", btn3Click)
+    btn4.removeEventListener("click", btn4Click)
+    btn5.removeEventListener("click", btn5Click)
+    btn6.removeEventListener("click", btn6Click)
+    btn7.removeEventListener("click", btn7Click)
+    btn8.removeEventListener("click", btn8Click)
+    btn9.removeEventListener("click", btn9Click)
+}
 
 /*----- functions -----*/
 
@@ -49,38 +62,102 @@ function gameOver() {
 function checkForWin() {
     if (btn1.innerHTML + btn2.innerHTML + btn3.innerHTML == "XXX") {
         gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn2.style.backgroundColor = "green"
+        btn3.style.backgroundColor = "green"
     } else if (btn4.innerHTML + btn5.innerHTML + btn6.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn4.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn6.style.backgroundColor = "green"
     } else if (btn7.innerHTML + btn8.innerHTML + btn9.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn7.style.backgroundColor = "green"
+        btn8.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn1.innerHTML + btn4.innerHTML + btn7.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn4.style.backgroundColor = "green"
+        btn7.style.backgroundColor = "green"
     } else if (btn2.innerHTML + btn5.innerHTML + btn8.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn2.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn8.style.backgroundColor = "green"
     } else if (btn3.innerHTML + btn6.innerHTML + btn9.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn3.style.backgroundColor = "green"
+        btn6.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn1.innerHTML + btn5.innerHTML + btn9.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn3.innerHTML + btn5.innerHTML + btn7.innerHTML == "XXX") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn3.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn7.style.backgroundColor = "green"
     } 
 
     else if (btn1.innerHTML + btn2.innerHTML + btn3.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn2.style.backgroundColor = "green"
+        btn3.style.backgroundColor = "green"
     } else if (btn4.innerHTML + btn5.innerHTML + btn6.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn4.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn6.style.backgroundColor = "green"
     } else if (btn7.innerHTML + btn8.innerHTML + btn9.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn7.style.backgroundColor = "green"
+        btn8.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn1.innerHTML + btn4.innerHTML + btn7.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn4.style.backgroundColor = "green"
+        btn7.style.backgroundColor = "green"
     } else if (btn2.innerHTML + btn5.innerHTML + btn8.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn2.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn8.style.backgroundColor = "green"
     } else if (btn3.innerHTML + btn6.innerHTML + btn9.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn3.style.backgroundColor = "green"
+        btn6.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn1.innerHTML + btn5.innerHTML + btn9.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn1.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn9.style.backgroundColor = "green"
     } else if (btn3.innerHTML + btn5.innerHTML + btn7.innerHTML == "OOO") {
-        alert("Win")
+        gameOver()
+        removeListener()
+        btn3.style.backgroundColor = "green"
+        btn5.style.backgroundColor = "green"
+        btn7.style.backgroundColor = "green"
     }
     
 }
