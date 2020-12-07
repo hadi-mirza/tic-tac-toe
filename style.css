@@ -4,7 +4,7 @@
 }
 
 .game-board {
-    background-color: blue;
+    background-color: black;
     width: 100%;
     height: 75vh;
     display: grid;
@@ -17,9 +17,24 @@
 }
 
 .game-stats {
-    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
     width: 100%;
     height: 75vh;
+    /* margin: 50px 50px 0 50px; */
+}
+
+.game-stats button {
+    height: 50px;
+    width: 300px;
+}
+
+.game-stats span {
+    color: black;
+    font-size: 3em;
 }
 
 #box1 {
@@ -74,6 +89,8 @@
 }
 
 .game-board button {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+    font-size: 2.5em;
 }
