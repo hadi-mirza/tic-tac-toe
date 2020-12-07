@@ -1,6 +1,7 @@
 /*----- app's state (variables) -----*/
 
 let currentPlayer = "X";
+let numberOfTurns = 0
 
 /*----- cached element references -----*/
 
@@ -63,6 +64,8 @@ function switchPlayer() {
   } else {
     currentPlayer = "X";
   }
+numberOfTurns += 1
+console.log(numberOfTurns)
 }
 
 function gameOver() {
@@ -75,7 +78,8 @@ function gameOver() {
 
 function init() {
   currentPlayer = "X";
-  display.innerHTML = "";
+  numberOfTurns = 0
+  display.innerHTML = "Player X goes first";
   btn1.innerHTML = "";
   btn2.innerHTML = "";
   btn3.innerHTML = "";
@@ -196,6 +200,8 @@ function checkForWin() {
     btn3.style.backgroundColor = "green";
     btn5.style.backgroundColor = "green";
     btn7.style.backgroundColor = "green";
+  } else if (numberOfTurns == 9) {
+    display.innerHTML = "Tie Game!"
   }
 }
 
